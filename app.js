@@ -17,6 +17,7 @@ mongoose.connect('mongodb+srv://mkieffer:Aspenparks12@cluster0.t6jua.mongodb.net
 var indexRouter = require('./routes/index');
 //Import Routes
 const getInfo = require('./routes/getinfo');
+const getProjects = require('./routes/getProjects');
 
 
 var app = express();
@@ -30,6 +31,7 @@ app.use(cors());
 
 app.use('/', indexRouter);
 app.use('/getinfo', getInfo);
+app.use('/getProjects', getProjects);
 
 
 module.exports = app;
